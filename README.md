@@ -15,7 +15,7 @@ Upload 1–10 images. The system analyses every scene with Gemini Vision, maps c
 ## 🌍 Live Demo
 
 🚀 **Try it online:**
-👉 [https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)
+👉 [https://storyforge-ai.streamlit.app/](https://your-app-name.streamlit.app)
 
 > Deployed using Streamlit Community Cloud.
 > Upload images and generate stories directly in your browser — no setup required.
