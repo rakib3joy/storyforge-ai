@@ -329,7 +329,11 @@ with st.sidebar:
             f"⚠️ Uses 2–3× more API calls. Best for final quality output."
         )
     )
-    show_debug          = st.checkbox("Show debug / processing details", value=False)
+    # show_debug          = st.checkbox("Show debug / processing details", value=False)
+    show_debug = st.checkbox(
+    "🔬 Developer Mode (Show internal pipeline data)",
+    value=False
+)
     show_token_usage    = st.checkbox("Show token monitoring", value=True)
     enable_caching      = st.checkbox("Enable scene caching", value=True)
 
