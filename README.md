@@ -20,13 +20,30 @@ Upload 1–10 images. The system analyses every scene with Gemini Vision, maps c
 > Deployed using Streamlit Community Cloud.
 > Upload images and generate stories directly in your browser — no setup required.
 
-<!-- --- -->
+<!-- ---
 
-<!-- Replace the line below with your actual demo GIF -->
-<!-- ![Demo](assets/demo.gif) -->
-<!-- > 📽️ **Demo GIF coming soon** — screen recording of the full pipeline in action. -->
+## 🎥 Demo Video
 
-<!-- --- -->
+    📽️ Watch the full pipeline walkthrough here:
+    https://www.youtube.com/watch?v=CFtDRmVOlrA
+
+--- -->
+
+---
+
+## 🎥 Live System Walkthrough
+
+[![Watch the demo](https://img.youtube.com/vi/CFtDRmVOlrA/maxresdefault.jpg)](https://www.youtube.com/watch?v=CFtDRmVOlrA)
+
+▶️ Click the image above to watch the full 1-minute system demo.
+
+---
+
+
+
+
+
+
 
 ## 🔍 What Makes This Different From a Standard LLM App?
 
