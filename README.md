@@ -15,18 +15,18 @@ Upload 1–10 images. The system analyses every scene with Gemini Vision, maps c
 ## 🌍 Live Demo
 
 🚀 **Try it online:**
-👉 [https://storyforge-ai.streamlit.app/](https://your-app-name.streamlit.app)
+👉 https://storyforge-ai.streamlit.app/
 
 > Deployed using Streamlit Community Cloud.
 > Upload images and generate stories directly in your browser — no setup required.
 
----
+<!-- --- -->
 
 <!-- Replace the line below with your actual demo GIF -->
 <!-- ![Demo](assets/demo.gif) -->
-> 📽️ **Demo GIF coming soon** — screen recording of the full pipeline in action.
+<!-- > 📽️ **Demo GIF coming soon** — screen recording of the full pipeline in action. -->
 
----
+<!-- --- -->
 
 ## 🔍 What Makes This Different From a Standard LLM App?
 
