@@ -612,9 +612,26 @@ if generate_button:
                         st.metric("Total Cost",   f"${stats['total_cost']:.4f}")
 
             except Exception as e:
-                st.error(f"❌ Pipeline Error: {e}")
+                error_message = str(e)
+
+                 # 🔹 Handle quota exceeded (429)
+                if "429" in error_message or "RESOURCE_EXHAUSTED" in error_message:
+                    st.error("🚫 Daily API quota exceeded. Please try again tomorrow.")
+
+                # 🔹 Handle API key issues (403)
+                elif "403" in error_message or "PERMISSION_DENIED" in error_message:
+                     st.error("🔑 API key issue detected. Please check your API key configuration.")
+
+                # 🔹 Generic fallback
+                else:
+                    st.error("❌ Something went wrong in the AI pipeline. Please try again.")
+
                 if show_debug:
                     st.exception(e)
+
+
+
+
 
 
 # ---------------------------------------------------
