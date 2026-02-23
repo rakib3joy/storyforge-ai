@@ -20,15 +20,6 @@ Upload 1–10 images. The system analyses every scene with Gemini Vision, maps c
 > Deployed using Streamlit Community Cloud.
 > Upload images and generate stories directly in your browser — no setup required.
 
-<!-- ---
-
-## 🎥 Demo Video
-
-    📽️ Watch the full pipeline walkthrough here:
-    https://www.youtube.com/watch?v=CFtDRmVOlrA
-
---- -->
-
 ---
 
 ## 🎥 Live System Walkthrough
