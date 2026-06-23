@@ -4,7 +4,8 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
 [![Google Gemini](https://img.shields.io/badge/Google-Gemini_2.5_Flash-green.svg)](https://ai.google.dev)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://your-app-name.streamlit.app)
+[![Docker Hub](https://img.shields.io/docker/v/rakib3joy/storyforge-ai?logo=docker&label=Docker%20Hub)](https://hub.docker.com/r/rakib3joy/storyforge-ai)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://storyforge-ai.streamlit.app)
 
 > **A multimodal narrative intelligence system that transforms image sequences into coherent, emotionally structured stories — with citation grounding and self-refinement.**
 
@@ -226,6 +227,8 @@ The application includes a built-in **Advanced Mode** toggle (sidebar) that expo
 
 ## 🚀 Quick Start
 
+The application can be run locally with Streamlit, via Docker, or pulled directly from the published Docker Hub image.
+
 ### Prerequisites
 - Python 3.10+
 - Google AI API key ([get one here](https://aistudio.google.com/app/apikey))
@@ -248,11 +251,39 @@ streamlit run app.py
 
 ---
 
+## 🐳 Run with Docker
+
+### Pull the image
+
+```bash
+docker pull rakib3joy/storyforge-ai:latest
+```
+
+### Run the container
+
+```bash
+docker run -p 8501:8501 \
+  -e GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY \
+  rakib3joy/storyforge-ai:latest
+```
+
+The application will be available at:
+
+```
+http://localhost:8501
+```
+
+---
+
 ## ☁️ Deployment
 
-This project is deployed using **Streamlit Community Cloud**.
+This project supports three deployment methods: **Streamlit Community Cloud**, **Docker**, and **Docker Hub**.
 
-### Deploy Your Own Version
+### Streamlit Community Cloud
+
+The live demo is hosted on Streamlit Community Cloud.
+
+**Deploy your own version:**
 
 1. Push your project to GitHub
 2. Go to [https://share.streamlit.io](https://share.streamlit.io)
@@ -263,7 +294,7 @@ This project is deployed using **Streamlit Community Cloud**.
 5. Add your `GOOGLE_API_KEY` in **Secrets**
 6. Click **Deploy**
 
-### Secrets Configuration
+**Secrets Configuration**
 
 In Streamlit Cloud → **Settings** → **Secrets**, add:
 
@@ -272,6 +303,24 @@ GOOGLE_API_KEY = "your_api_key_here"
 ```
 
 > ⚠️ Never commit your `.env` file or API key to GitHub. Always use Streamlit Secrets for deployed apps.
+
+### Docker
+
+Build and run the container locally using the included `Dockerfile`:
+
+```bash
+docker build -t storyforge-ai .
+docker run -p 8501:8501 -e GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY storyforge-ai
+```
+
+### Docker Hub
+
+The pre-built image is published to Docker Hub at [`rakib3joy/storyforge-ai`](https://hub.docker.com/r/rakib3joy/storyforge-ai). Pull and run without building locally:
+
+```bash
+docker pull rakib3joy/storyforge-ai:latest
+docker run -p 8501:8501 -e GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY rakib3joy/storyforge-ai:latest
+```
 
 ---
 
@@ -305,6 +354,8 @@ After generating a story, a **"Run Ablation Study"** button appears — fires 3 
 ```
 storyforge-ai/
 ├── app.py                        # Streamlit UI — all 4 levels wired together
+├── Dockerfile
+├── .dockerignore
 ├── requirements.txt
 ├── .env                          # GOOGLE_API_KEY (not committed)
 ├── logs/
